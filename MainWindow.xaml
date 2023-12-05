@@ -1,0 +1,17 @@
+﻿<Window x:Class="G23W14.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="취미 데이터 관리 프로그램" Height="450" Width="800">
+    <Grid>
+        <Border Padding="10">
+            <DockPanel>
+                <Image x:Name="Img" DockPanel.Dock="Right" Margin="10" Source="{Binding HobbyImage}"/>
+                <Button Content="Add" DockPanel.Dock="Bottom" Click="OnAdd"/>
+                <DataGrid x:Name="DGrid" DockPanel.Dock="Top" SelectedItem="{Binding Model}" KeyUp="OnGridKeyUp" IsReadOnly="True" MouseDoubleClick="OnGridDoubleClick"/>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>
